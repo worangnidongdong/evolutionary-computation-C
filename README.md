@@ -4,8 +4,8 @@
 ##通过粒子群算法优化决策树结点
 
 file construction:
---|evolutionary-computation-C
-----|mymain.c
-----|mypso.c
-----|mydecisiontree.c
-----|mydecisiontree.h
+--|evolutionary-computation-C  floder
+----|mymain.c                  file
+----|mypso.c                   file
+----|mydecisiontree.c          file
+----|mydecisiontree.h          file
