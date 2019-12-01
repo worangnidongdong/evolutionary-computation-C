@@ -7,13 +7,13 @@
 
 #file construction:
 
---|evolutionary-computation-C  floder
+--|evolutionary-computation-C
 
-----|mymain.c                  file
+----|mymain.c
 
-----|mypso.c                   file
+----|mypso.c
 
-----|mydecisiontree.c          file
+----|mydecisiontree.c
 
-----|mydecisiontree.h          file
+----|mydecisiontree.h
 
