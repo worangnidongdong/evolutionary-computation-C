@@ -1,19 +1,21 @@
-import numpy as np
-cimport numpy as np
+#ifndef _MYDECISION_H
+#define _MYDECISION_H
 
-# ctypedef np.float64 as FLOAT
-# ctypedef np.int64 as INT
-
-cdef struct Element:
+typedef struct _element{
   float   *f  #属性列表
   int D       #属性个数
   int type    #元素类别
-  
-cdef struct Data:
+}Element;
+
+typedef struct _data{
   Element *e  #样本列表
   int N       #样本个数
   int T       #类别总数
-  
-cdef struct Sample:
+}Data;
+
+typedef struct _sample{
   int *s      #样本集合
   int n       #样本个数
+}Sample;
+
+#endif
