@@ -1,6 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "mydecision.h"
 
 Data gData;
+int  gMaxLevel;
 
 int set_gData(float *f, int *type, int n, int d, int t)
 {
@@ -42,3 +45,20 @@ void disp_gData(void)
     printf("\n");
   }
 }
+
+void _establish_decisiontree(int *s, int n, int l)
+{
+  if(l >= gMaxLevel) return;
+  
+}
+
+void establish_decisiontree(int l)
+{
+  gMaxLevel = l;
+  Sample s;
+  s.N = gData.N;
+  s.s = (int *)malloc(s.N * sizeof(int));
+  _establish_decisiontree(0);
+  free(s.s);
+}
+
