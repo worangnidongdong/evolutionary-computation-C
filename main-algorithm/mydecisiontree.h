@@ -11,6 +11,7 @@ typedef struct _data{
   Element *e;  /* 样本列表 */
   int N;       /* 样本个数 */
   int T;       /* 类别总数 */
+  int D;       /* 属性个数 */
 }Data;
 
 typedef struct _sample{
