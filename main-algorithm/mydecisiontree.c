@@ -193,7 +193,7 @@ static void _establish_decisiontree(Sample *s, int l, int parent, int node)
   float *w = (float *)malloc(gData.D * sizeof(float));
 
   gRoot = s;
-  mypso_regulation(w, gData.D, _cal_fitness, 1000, 100, 0); /* max fitness */
+  mypso_regulation(w, gData.D, _cal_fitness, 1000, 500, 0); /* max fitness */
   gRoot = NULL;
 
   disp_coefficient(w, gData.D, node);
@@ -204,8 +204,8 @@ static void _establish_decisiontree(Sample *s, int l, int parent, int node)
 
   _divide_set(s, &left, &right, w, gData.D);
 
-  _establish_decisiontree(&left, l + 1, node, node + 1);
-  _establish_decisiontree(&right, l + 1, node, node + 2);
+  _establish_decisiontree(&left, l + 1, node, 2 * node + 1);
+  _establish_decisiontree(&right, l + 1, node, 2 * node + 2);
 
   free(w);
   free(left.s);
